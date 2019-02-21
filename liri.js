@@ -36,6 +36,7 @@ function liri() {
                 });
             break;
         case "spotify-this-song":
+        //check if user has input; else sample value goes here
             spotify.search({ type: 'track', query: details, limit: 1 }, function (err, data) {
                 if (err) {
                     return console.log('Error occurred: ' + err);
@@ -69,8 +70,6 @@ function liri() {
                 console.log("plot: " + plot);
                 var actors = response.data.Actors;
                 console.log("actors: "+ Actors);
-                
-                
                 
                 
                 // * Language of the movie.
